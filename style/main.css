@@ -69,6 +69,7 @@ img {
   border-radius: 3px;
   color: white;
   margin-top: 8px;
+  margin-bottom: 8px;
   text-align: center; }
   .score-container:after, .best-container:after {
     position: absolute;
