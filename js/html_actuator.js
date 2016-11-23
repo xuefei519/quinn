@@ -27,8 +27,11 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
     if (metadata.terminated) {
       if (metadata.over) {
         self.message(false); // You lose
-      } else if (metadata.won) {
+      } else if (metadata.won&&!metadata.super) {
         self.message(true); // You win!
+      }
+      else if (metadata.super) {
+        self.supermessage(true); // You win!
       }
     }
 
@@ -142,9 +145,19 @@ HTMLActuator.prototype.message = function (won) {
     this.messageContainer.getElementsByTagName("img")[0].src='img/over.jpg';
   }
 };
+HTMLActuator.prototype.supermessage = function () {
+  var type    ="super";
+  var message = "Humm...";
+
+  this.messageContainer.classList.add(type);
+  this.messageContainer.getElementsByTagName("p")[0].textContent = message;
+    this.messageContainer.getElementsByTagName("img")[0].src='img/super.jpg';
+    this.messageContainer.getElementsByTagName("scan")[0].textContent='有时间玩我不如打给我!';
+  };
 
 HTMLActuator.prototype.clearMessage = function () {
   // IE only takes one value to remove at a time.
   this.messageContainer.classList.remove("game-won");
   this.messageContainer.classList.remove("game-over");
+  this.messageContainer.classList.remove("super");
 };
