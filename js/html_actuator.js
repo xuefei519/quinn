@@ -135,7 +135,11 @@ HTMLActuator.prototype.message = function (won) {
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
   if(won){
-    this.messageContainer.getElementsByTagName("scan")[0].textContent='Happy birthday!'
+    this.messageContainer.getElementsByTagName("img")[0].src='img/won.jpg';
+    this.messageContainer.getElementsByTagName("scan")[0].textContent='Happy birthday!';
+  }
+  else{
+    this.messageContainer.getElementsByTagName("img")[0].src='img/over.jpg';
   }
 };
 

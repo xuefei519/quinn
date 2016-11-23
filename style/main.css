@@ -569,7 +569,7 @@ hr {
     float: left;
     position:relative;
     left:-150px;
-    top:135px;
+    top:150px;
     color:#D19DA7;
   }
 
@@ -662,6 +662,9 @@ hr {
       .game-container .game-message.game-won {
         background: rgba(209,157,167, 0.5);
         color: #f9f6f2; }
+  .game-container .game-message.game-over {
+    background: rgba(143,129,131, 0.5);
+    color: #f9f6f2; }
         .game-container .game-message.game-won a.keep-playing-button {
           display: inline-block; }
       .game-container .game-message.game-won, .game-container .game-message.game-over {
