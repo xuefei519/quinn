@@ -28,7 +28,7 @@ GameManager.prototype.keepPlaying = function () {
 
 // Return true if the game is lost, or has won and the user hasn't kept playing
 GameManager.prototype.isGameTerminated = function () {
-  return this.over || (this.won && !this.keepPlaying);
+  return this.over || (this.won && !this.keepPlaying)||(this.keepPlaying&&this.super);
 };
 
 // Set up the game
@@ -42,12 +42,14 @@ GameManager.prototype.setup = function () {
     this.score       = previousState.score;
     this.over        = previousState.over;
     this.won         = previousState.won;
+    this.super       = previousState.super;
     this.keepPlaying = previousState.keepPlaying;
   } else {
     this.grid        = new Grid(this.size);
     this.score       = 0;
     this.over        = false;
     this.won         = false;
+    this.super       = false;
     this.keepPlaying = false;
 
     // Add the initial tiles
@@ -92,6 +94,7 @@ GameManager.prototype.actuate = function () {
     score:      this.score,
     over:       this.over,
     won:        this.won,
+    super:      this.super,
     bestScore:  this.storageManager.getBestScore(),
     terminated: this.isGameTerminated()
   });
@@ -105,6 +108,7 @@ GameManager.prototype.serialize = function () {
     score:       this.score,
     over:        this.over,
     won:         this.won,
+    super:       this.super,
     keepPlaying: this.keepPlaying
   };
 };
@@ -167,7 +171,8 @@ GameManager.prototype.move = function (direction) {
           self.score += merged.value;
 
           // The mighty 2048 tile
-          if (merged.value === 1024) self.won = true;
+          if (merged.value === 4) self.won = true;
+          if (merged.value === 8) self.super = true;
         } else {
           self.moveTile(tile, positions.farthest);
         }
