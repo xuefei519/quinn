@@ -1,4 +1,5 @@
 @import url(fonts/clear-sans.css);
+@import url(fonts/lobster.css);
 html, body {
   margin: 0;
   padding: 0;
@@ -20,7 +21,8 @@ h1.title {
   font-weight: bold;
   margin: 0;
   display: block;
-  float: left; }
+  float: left;
+  font-family: 'Lobster', cursive;}
 
 h3.subtitle {
   font-size: 30px;
@@ -30,7 +32,19 @@ h3.subtitle {
   float: left;
   position: relative;
   top: 65px;
-  left: -50px;}
+  left: -50px;
+  font-family: 'Lobster', cursive;}
+h4{
+  font-size: 18px;
+  margin: 0;
+  display: block;
+  float: left;
+  position:relative;
+  left: -250px;
+  top: 140px;
+  color:#D19DA7;
+  font-family: 'Lobster', cursive;
+}
 
 @-webkit-keyframes $animation-name {
   0% {
@@ -80,7 +94,7 @@ h3.subtitle {
     font-size: 13px;
     line-height: 13px;
     text-align: center;
-    color: #B55E75; }
+    color: #D19DA7; }
   .score-container .score-addition, .best-container .score-addition {
     position: absolute;
     right: 30px;
@@ -333,7 +347,7 @@ hr {
   transition-property: transform; }
   .tile .tile-inner {
     border-radius: 3px;
-    background: #B55E75;
+    background: #D19DA7;
     text-align: center;
     font-weight: bold;
     z-index: 10;
@@ -549,6 +563,15 @@ hr {
     position:relative;
     left:-50px;
   top:55px;}
+
+  h4{
+    font-size: 12px;
+    float: left;
+    position:relative;
+    left:-150px;
+    top:135px;
+    color:#D19DA7;
+  }
 
   .container {
     width: 350px;
