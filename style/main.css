@@ -224,6 +224,13 @@ hr {
         display: inline-block; }
     .game-container .game-message.game-won, .game-container .game-message.game-over {
       display: block; }
+.game-container .game-message.super {
+  background: rgba(209,157,167, 0.5);
+  color: #f9f6f2; }
+.game-container .game-message.super a.keep-playing-button {
+  display: none; }
+.game-container .game-message.super, .game-container .game-message.game-over {
+  display: block; }
 
 .grid-container {
   position: absolute;
@@ -669,6 +676,13 @@ hr {
           display: inline-block; }
       .game-container .game-message.game-won, .game-container .game-message.game-over {
         display: block; }
+  .game-container .game-message.super {
+    background: rgba(209,157,167, 0.5);
+    color: #f9f6f2; }
+  .game-container .game-message.super a.keep-playing-button {
+    display: none; }
+  .game-container .game-message.super, .game-container .game-message.game-over {
+    display: block; }
 
   .grid-container {
     position: absolute;
