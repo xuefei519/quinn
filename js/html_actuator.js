@@ -134,6 +134,9 @@ HTMLActuator.prototype.message = function (won) {
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
+  if(won){
+    this.messageContainer.getElementsByTagName("scan")[0].textContent='Happy birthday!'
+  }
 };
 
 HTMLActuator.prototype.clearMessage = function () {
