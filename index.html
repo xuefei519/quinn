@@ -10,6 +10,23 @@
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
+	<div class="hidden">
+	<script type="text/javascript">
+		<!--//--><![CDATA[//><!--
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image()
+					images[i].src = preload.arguments[i]
+				}
+			}
+			preload(
+				"img/2.jpg","img/4.jpg","img/8.jpg","img/16.jpg","img/32.jpg","img/64.jpg","img/128.jpg",
+				"img/256.jpg","img/512.jpg","img/1024.jpg","img/2048.jpg","img/won.jpg","img/over.jpg","img/super.jpg",
+			)
+		//--><!]]>
+	</script>
+</div>
   <div class="container">
     <div class="heading">
       <h1 class="title">2016</h1>
