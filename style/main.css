@@ -202,6 +202,10 @@ hr {
       height: 60px;
       line-height: 60px;
       margin-top: 30px; }
+    .game-container .game-message scan{
+      font-weight: bold;
+      font-size: 30px;
+    }
     .game-container .game-message .lower {
       display: block;
       margin-top: 59px; }
@@ -651,6 +655,10 @@ hr {
         height: 60px;
         line-height: 60px;
         margin-top: 20px; }
+  .game-container .game-message scan{
+    font-weight: bold;
+    font-size: 20px;
+  }
       .game-container .game-message .lower {
         display: block;
         margin-top: 59px; }
